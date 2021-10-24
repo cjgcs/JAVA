@@ -1,0 +1,10 @@
+public class A {
+	
+	public static void main(String[] args) {
+		Scanner wd=new Scanner(System.in);
+		double a,b;
+		a=wd.nextDouble();
+		b=a*9/5+32;      //计算公式
+		System.out.printf("%.2f",b);  //输出样式%f为小数
+	}
+}
