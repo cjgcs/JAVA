@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner kb=new Scanner(System.in);
+		int n=kb.nextInt();
+		int x = 0;
+		int [][] a=new int[n][n];
+		for(int i = 0;i<a.length;i++) {
+			for(int j = 0;j<n;j++) {
+				a[i][j]=kb.nextInt();
+			}
+		}
+		 for(int i=0;i<n;i++)
+		        for(int j=0;j<i;j++)
+		        {
+		           if(a[i][j]!=0)
+		              x=1;
+		        }
+		    if(x==0)
+		       System.out.println("YES");
+		    else System.out.println("NO");
+		  
+
+	}
+
+}
+输入一个正整数n(1<=n<=6)和n阶矩阵a中的元素，如果a是上三角矩阵，输出“YES”；否则，输出“NO”（上三角矩阵，即主对角线以下的元素都为0，主对角线为从矩阵的左上角至右下角的连线）。
