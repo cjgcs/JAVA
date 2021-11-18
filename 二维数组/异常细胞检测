@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner kb=new Scanner(System.in);
+		int n;
+		int bug = 0;
+		n=kb.nextInt();
+		int [][] a=new int[n][n];
+		for(int i = 0;i<n;i++) {
+			for(int j = 0;j<n;j++) {
+				a[i][j]=kb.nextInt();
+			}
+		}
+		for(int i = 1;i<n-1;i++) {
+			for(int j = 1;j<n-1;j++) {
+				if(	a[i-1][j]-a[i][j]>=50|
+					a[i+1][j]-a[i][j]>=50|
+					a[i][j-1]-a[i][j]>=50|
+					a[i][j+1]-a[i][j]>=50){
+					bug++;
+				}
+			}
+		}
+		
+		System.out.println(bug);
+	}
+
+}
+我们拍摄的一张CT照片用一个二维数组来存储，假设数组中的每个点代表一个细胞。每个细胞的颜色用0到255之间（包括0和255）的一个整数表示。我们定义一个细胞是异常细胞，如果这个细胞的颜色值比它上下左右4个细胞的颜色值都小50以上（包括50）。数组边缘上的细胞我们不检测。现在我们的任务是，给定一个存储CT照片的二维数组，写程序统计照片中异常细胞的数目。
