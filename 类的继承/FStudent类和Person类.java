@@ -1,4 +1,4 @@
-package ��ļ̳�;
+package ÀàµÄ¼Ì³Ð;
 
  class Persons{
 	protected String name;
@@ -38,7 +38,7 @@ package ��ļ̳�;
 	
  }
   
- class Main{
+ class FStudent类和Person类{
 	public static void main(String[] args) {
 		Persons frank=new Persons("Frank " , 'M');
 		Students alice=new Students("Alice ",'F');
