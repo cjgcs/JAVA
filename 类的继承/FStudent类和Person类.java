@@ -28,17 +28,17 @@ package ÀàµÄ¼Ì³Ð;
 	 }
 	 public String toString() {
 		 String s=new String(name+"(sex : "+ sex);
-		 String sex=new String("; id :"+ 0000001);
+		 if(id!=null &&!"".equals(id)){s+=" ; "+"id : "+id;}   //判断id输入是否为空
 		 s+=")";
 		 return s;
 	 }
-	  String  Students(String id){
-		 return this.id=id;
+	  public  void adc(String id){
+		 this.id=id;
 	 }
 	
  }
   
- class FStudent类和Person类{
+public class FStudent类和Person类{
 	public static void main(String[] args) {
 		Persons frank=new Persons("Frank " , 'M');
 		Students alice=new Students("Alice ",'F');
@@ -46,7 +46,7 @@ package ÀàµÄ¼Ì³Ð;
 		System.out.println("alice: "+alice);
 		Persons tom=alice;
 		System.out.println("tom: "+tom);
-//		Students tom=tom.toString();
+		alice.adc("0000001");
 		System.out.println("tom: "+tom);
 	}
 
